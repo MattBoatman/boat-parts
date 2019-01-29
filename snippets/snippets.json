@@ -1,0 +1,12 @@
+{
+  "reactClassComponent": {
+    "prefix": "rcc",
+    "body": "import React from 'react';\n\nexport default class ${1:${TM_FILENAME_BASE}} extends React.Component {\n\tstate = {};\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\n",
+    "description": "Class Component (You are probably using local state)"
+  },
+  "reactClassComponentWithProps": {
+    "prefix": "rccp",
+    "body": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nexport default class ${1:${TM_FILENAME_BASE}} extends React.Component {\n\tstatic propTypes = {};\n\n\tstatic defaultProps = {};\n\n\tstate = {};\n\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\n",
+    "description": "Class Component (You are probably using local state), with props"
+  }
+}
