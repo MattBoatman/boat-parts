@@ -2,7 +2,7 @@
     "name": "boat-parts",
     "displayName": "Boat Parts (react snippets)",
     "description": "Snippets for the way I like writing react code",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "mattboatman",
     "license": "MIT",
     "repository": {
