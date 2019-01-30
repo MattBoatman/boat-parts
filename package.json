@@ -1,8 +1,14 @@
 {
     "name": "boat-parts",
     "displayName": "boat-parts",
-    "description": "",
+    "description": "Snippets for the way I like writing react code",
     "version": "0.0.1",
+    "publisher": "mattboatman",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MattBoatman/boat-parts"
+    },
     "engines": {
         "vscode": "^1.30.0"
     },
