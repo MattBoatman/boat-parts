@@ -130,22 +130,22 @@
     "description": "Is an instance of a class prop type required"
   },
   "propTypeEnum": {
-    "prefix": "pte",
+    "prefix": "ptone",
     "body": "PropTypes.oneOf(['$0']),",
     "description": "Prop type limited to specific values by treating it as an enum"
   },
   "propTypeEnumRequired": {
-    "prefix": "pter",
+    "prefix": "ptoner",
     "body": "PropTypes.oneOf(['$0']).isRequired,",
     "description": "Prop type limited to specific values by treating it as an enum required"
   },
   "propTypeOneOfType": {
-    "prefix": "ptet",
+    "prefix": "ptoneoft",
     "body": "PropTypes.oneOfType([\n\t$0\n]),",
     "description": "An object that could be one of many types"
   },
   "propTypeOneOfTypeRequired": {
-    "prefix": "ptetr",
+    "prefix": "ptoneofr",
     "body": "PropTypes.oneOfType([\n\t$0\n]).isRequired,",
     "description": "An object that could be one of many types required"
   },
