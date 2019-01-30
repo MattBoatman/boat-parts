@@ -198,5 +198,45 @@
     "prefix": "ptanyr",
     "body": "PropTypes.any.isRequired,",
     "description": "A value of any data type that is required"
+  },
+  "oliveButtonImport": {
+    "prefix": "impobtn",
+    "body": "import Button from 'olive-components/lib/button';",
+    "description": "import olive-components button"
+  },
+  "oliveButton": {
+    "prefix": "obtn",
+    "body": "<Button\n\t${1:label=\"${2}\"}\n\t${3:color={Button.COLOR.${4|BLUE_OUTLINE,CLEAR,CLEAR_GREY,GREY_OUTLINE,PURPLE,PURPLE_LIGHT,PURPLE_OUTLINE,WARNING|}}}\n\tonClick={$0}\n/>",
+    "description": "olive-components button"
+  },
+  "oliveIconButtonImport": {
+    "prefix": "impoiconbtn",
+    "body": "import IconButton from 'olive-components/lib/iconButton';",
+    "description": "import olive-components iconbutton"
+  },
+  "oliveIconButton": {
+    "prefix": "oiconbtn",
+    "body": "<IconButton\n\ticon={IconButton.ICON.${1}}\n\t${2:buttonSize={IconButton.SIZE.${3|TINY,XXSM,XSM,SM,NORMAL,LG,XLG,XXLG|}}}\n\t${4:iconSize={IconButton.SIZE.${5|TINY,XXSM,XSM,SM,NORMAL,LG,XLG,XXLG|}}}\n\t${6:color={IconButton.COLOR.${7|BLUE_OUTLINE,CLEAR,CLEAR_GREY,GREY_OUTLINE,PURPLE,PURPLE_LIGHT,PURPLE_OUTLINE,WARNING|}}}\n\tonClick={$0}\n/>",
+    "description": "olive-components icon button"
+  },
+  "oliveIconImport": {
+    "prefix": "impoicon",
+    "body": "import Icon from 'olive-components/lib/icon';",
+    "description": "import olive-components iconbutton"
+  },
+  "oliveIcon": {
+    "prefix": "oicon",
+    "body": "<Icon icon={Icon.ICON.${2}} ${3:size={IconButton.SIZE.${4|TINY,XXSM,XSM,SM,NORMAL,LG,XLG,XXLG|}}}/>",
+    "description": "olive-components icon"
+  },
+  "oliveInput": {
+    "prefix": "oinput",
+    "body": "<Input \n\tlabel=\"${1}\"\n\tvalue={${2:value}}\n\t${3:required}\n\tonChange={$0}\n/>",
+    "description": "olive-components input"
+  },
+  "oliveInputImprt": {
+    "prefix": "impoinput",
+    "body": "import Input from 'olive-components/lib/input';",
+    "description": "imput olive-components input"
   }
 }
