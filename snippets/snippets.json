@@ -1,22 +1,42 @@
 {
   "reactClassComponent": {
     "prefix": "rcc",
-    "body": "import React from 'react';\n\nexport default class ${1:${TM_FILENAME_BASE}} extends React.Component {\n\tstate = {};\n\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\n",
+    "body": "import React from 'react';\n\nexport default class ${1:${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}} extends React.Component {\n\tstate = {};\n\n\trender() {\n\t\treturn (\n\t\t\t<div className=\"${2:${TM_FILENAME_BASE}}\">\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\n",
     "description": "Class Component (You are probably using local state or lifecycle methods)"
   },
   "reactClassComponentWithProps": {
     "prefix": "rccp",
-    "body": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nexport default class ${1:${TM_FILENAME_BASE}} extends React.Component {\n\tstatic propTypes = {\n\t\t${2:propName}: PropTypes.${3|string,func,bool,number,array,object,oneOfType,node|}${4:.isRequired},\n\t};\n\n\t${5:static defaultProps = {\n\t\t${2:propName}: ${6:''},\n\t\\};}\n\n\tstate = {\n\t\t${7}\n\t};\n\n\trender() {\n\t\tconst { ${2:propName} } = this.props;\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n};\n",
+    "body": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nexport default class ${1:${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}} extends React.Component {\n\tstatic propTypes = {\n\t\t${2:propName}: PropTypes.${3|string,func,bool,number,array,object,oneOfType,node|}${4:.isRequired},\n\t};\n\n\t${5:static defaultProps = {\n\t\t${2:propName}: ${6:''},\n\t\\};}\n\n\tstate = {\n\t\t${7}\n\t};\n\n\trender() {\n\t\tconst { ${2:propName} } = this.props;\n\t\treturn (\n\t\t\t<div className=\"${8:${TM_FILENAME_BASE}}\">\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n};\n",
     "description": "Class Component (You are probably using local state or lifecycle methods), with props"
   },
   "reactFunctionalComponent": {
     "prefix": "rfc",
-    "body": "import React from 'react';\n\nfunction ${1:${TM_FILENAME_BASE}}() {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n}\n\nexport default ${1:${TM_FILENAME_BASE}};\n",
+    "body": "import React from 'react';\n\nfunction ${1:${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}}() {\n\treturn (\n\t\t<div className=\"${2:${TM_FILENAME_BASE}}\">\n\t\t\t$0\n\t\t</div>\n\t);\n}\n\nexport default ${1:${TM_FILENAME_BASE}};\n",
     "description": "Functional React Component"
   },
   "reactFunctionalComponentWithProps": {
     "prefix": "rfcp",
-    "body": "import React from 'react';\n\nfunction ${1:${TM_FILENAME_BASE}}({ ${2:propName} }) {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n}\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\t${2:propName}: PropTypes.${3|string,func,bool,number,array,object,oneOfType,node|},\n};\n\n${4:${1:${TM_FILENAME_BASE}}.defaultProps = {\n\t${2:propName}: ${5:''},\n\\};}\n\nexport default ${1:${TM_FILENAME_BASE}};\n",
+    "body": "import React from 'react';\n\nfunction ${1:${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}}({ ${2:propName} }) {\n\treturn (\n\t\t<div className=\"${6:${TM_FILENAME_BASE}}\">\n\t\t\t$0\n\t\t</div>\n\t);\n}\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\t${2:propName}: PropTypes.${3|string,func,bool,number,array,object,oneOfType,node|},\n};\n\n${4:${1:${TM_FILENAME_BASE}}.defaultProps = {\n\t${2:propName}: ${5:''},\n\\};}\n\nexport default ${1:${TM_FILENAME_BASE}};\n",
     "description": "Functional React Component with Props"
+  },
+  "setStateWithPrevState": {
+    "prefix": "ssps",
+    "body": "this.setState(prevState => ({\n\t${1:stateProperty}: prevState.${1:stateProperty},\n}));",
+    "description": "Set State Using the Previous State"
+  },
+  "mapStateToPropsShorthand": {
+    "prefix": "mstpsh",
+    "body": "const mapStateToProps = state => ({\n\t${1:stateProperty}: state.${1:stateProperty},\n});",
+    "description": "Map State to Props, Shorthand"
+  },
+  "mapStateToProps": {
+    "prefix": "mstp",
+    "body": "const mapStateToProps = state => {\n\treturn {\n\t\t${1:stateProperty}: state.${1:stateProperty},\n\t};\n};",
+    "description": "Map State to Props"
+  },
+  "mapDispatchToProps": {
+    "prefix": "mdtp",
+    "body": "const mapDispatchToProps = dispatch => ({\n\t${1:actionName}: (${2:params}) => dispatch(${1:actionName}(${2:params})),\n});",
+    "description": "Map Dispatch to Props"
   }
 }
