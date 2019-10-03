@@ -199,6 +199,16 @@
     "body": "PropTypes.any.isRequired,",
     "description": "A value of any data type that is required"
   },
+  "propTypeDate": {
+    "prefix": "ptd",
+    "body": "PropTypes.Date,",
+    "description": "A Date object"
+  },
+  "propTypeDateRequired": {
+    "prefix": "ptdr",
+    "body": "PropTypes.Date.isRequired,",
+    "description": "A Date object that is required"
+  },
   "oliveButtonImport": {
     "prefix": "impobtn",
     "body": "import Button from 'olive-components/lib/button';",
