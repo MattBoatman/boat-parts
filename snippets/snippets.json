@@ -16,7 +16,7 @@
   },
   "reactFunctionalComponentWithProps": {
     "prefix": "rfcp",
-    "body": "import React from 'react';\n\nfunction ${1:${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}}({ ${2:propName} }) {\n\treturn (\n\t\t<div className=\"${6:${TM_FILENAME_BASE}}\">\n\t\t\t$0\n\t\t</div>\n\t);\n}\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\t${2:propName}: PropTypes.${3|string,func,bool,number,array,object,oneOfType,node|},\n};\n\n${4:${1:${TM_FILENAME_BASE}}.defaultProps = {\n\t${2:propName}: ${5:''},\n\\};}\n\nexport default ${1:${TM_FILENAME_BASE}};\n",
+    "body": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nfunction ${1:${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}}({ ${2:propName} }) {\n\treturn (\n\t\t<div className=\"${6:${TM_FILENAME_BASE}}\">\n\t\t\t$0\n\t\t</div>\n\t);\n}\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\t${2:propName}: PropTypes.${3|string,func,bool,number,array,object,oneOfType,node|},\n};\n\n${4:${1:${TM_FILENAME_BASE}}.defaultProps = {\n\t${2:propName}: ${5:''},\n\\};}\n\nexport default ${1:${TM_FILENAME_BASE}};\n",
     "description": "Functional React Component with Props"
   },
   "setStateWithPrevState": {
